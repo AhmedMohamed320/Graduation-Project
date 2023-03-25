@@ -25,6 +25,13 @@ body {
 }
 
 .container {
-    max-width: 130rem;
+    width: 95%;
+    max-width: 150rem;
     margin: auto;
+}
+
+@media (max-width:90rem) {
+    html{
+        font-size:50%;
+    }
 }
