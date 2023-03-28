@@ -10,9 +10,12 @@
 :root {
     --color-dark: #141414;
     --color-dark-2: #212121cc;
+    --color-dark-3: #292D32;
     --color-main: #ec704d;
     --color-white-1: #fff;
-    --color-white-2: #d9d9d9;
+    --color-white-2: #b4b4b4;
+    --color-white-3: #d9d9d971;
+
 }
 
 html {
