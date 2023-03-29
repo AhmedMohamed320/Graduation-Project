@@ -4,6 +4,7 @@ nav{
     gap: 2rem;
     position: relative;
     padding: 1.5rem 0;
+    z-index: 100;
 }
 
 nav .logo{
@@ -75,6 +76,8 @@ nav .info .profile-info{
     font-size: 1.6rem;
     font-weight: 300;
     display: none;
+    background-color: var(--color-dark-3);
+    
 }
 
 nav .info .profile-info.active{

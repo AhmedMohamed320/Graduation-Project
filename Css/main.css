@@ -12,6 +12,7 @@
     --color-dark-2: #212121cc;
     --color-dark-3: #292D32;
     --color-main: #ec704d;
+    --color-main-2:#EC704D80;
     --color-white-1: #fff;
     --color-white-2: #b4b4b4;
     --color-white-3: #d9d9d971;
@@ -38,4 +39,10 @@ body {
     html {
         font-size: 50%;
     }
+}
+
+.sec-home {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    height: calc(100vh - 10rem);
 }
