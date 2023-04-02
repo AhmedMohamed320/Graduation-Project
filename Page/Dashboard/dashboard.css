@@ -1,28 +1,20 @@
-.dashboard-page {
-    background-color: var(--color-dark-2);
-    border-radius: 2rem;
-    padding: 2rem 3rem;
-    font-size: 2.2rem;
-    overflow: hidden;
-}
-
-.dashboard-page .title p:nth-of-type(1) {
+.main-page .title p:nth-of-type(1) {
     font-weight: 500;
 }
 
-.dashboard-page .title p:nth-of-type(2) {
+.main-page .title p:nth-of-type(2) {
     color: var(--color-white-2);
     font-weight: 200;
     margin: 1rem 0;
 }
 
-.dashboard-page .search {
+.main-page .search {
     background-color: var(--color-dark);
     border-radius: 1.5rem;
     padding: 1.5rem 2rem 0;
 }
 
-.dashboard-page .search .input {
+.main-page .search .input {
     background-color: var(--color-dark-3);
     padding: 0 1.5rem;
     border-radius: 1.5rem;
@@ -32,7 +24,7 @@
     gap: 1rem;
 }
 
-.dashboard-page .search .input input {
+.main-page .search .input input {
     all: unset;
     width: 100%;
     height: 6rem;
@@ -40,7 +32,7 @@
     font-weight: 300;
 }
 
-.dashboard-page .search .templates-types {
+.main-page .search .templates-types {
     width: 100%;
     padding: 1.5rem 0 1.5rem 0.5rem;
     display: flex;
@@ -52,22 +44,22 @@
     overflow-x: auto;
 }
 
-.dashboard-page .search .templates-types::-webkit-scrollbar {
+.main-page .search .templates-types::-webkit-scrollbar {
     height: 0.8rem;
     background-color: transparent;
 }
 
-.dashboard-page .search .templates-types::-webkit-scrollbar-thumb {
+.main-page .search .templates-types::-webkit-scrollbar-thumb {
     border-radius: 0.5rem;
     background-color: var(--color-dark);
     -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
 }
 
-.dashboard-page .search .templates-types::-webkit-scrollbar-thumb:hover {
+.main-page .search .templates-types::-webkit-scrollbar-thumb:hover {
     border: 1px solid var(--color-dark-2);
 }
 
-.dashboard-page .search .templates-types span {
+.main-page .search .templates-types span {
     white-space: nowrap;
     background-color: var(--color-dark-3);
     border-radius: 5rem;
@@ -75,7 +67,7 @@
     cursor: pointer;
 }
 
-.dashboard-page .search .templates-types span.active {
+.main-page .search .templates-types span.active {
     background-color: var(--color-main);
     color: var(--color-dark);
 }

@@ -46,3 +46,26 @@ body {
     grid-template-columns: auto 1fr;
     height: calc(100vh - 10rem);
 }
+
+.main-page {
+    background-color: var(--color-dark-2);
+    border-radius: 2rem;
+    padding: 2rem 3rem;
+    font-size: 2.2rem;
+    overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0.8rem;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 0.5rem;
+    background-color: var(--color-dark);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    border: 1px solid var(--color-dark-2);
+}

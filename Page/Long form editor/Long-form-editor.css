@@ -1,0 +1,103 @@
+.main-page{
+    overflow: hidden;
+    overflow-y: auto;
+}
+.main-page .part-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+.main-page .part-1 > div {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.main-page .part-1 > div:nth-of-type(1) img {
+    background-color: var(--color-main-2);
+    color: var(--color-dark-2);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.main-page .part-1 > div:nth-of-type(2) img {
+    background-color: var(--color-main);
+    padding: 1rem;
+    border-radius: 50%;
+}
+
+li {
+    margin-left: 16px;
+}
+
+a {
+    cursor: pointer;
+}
+
+.part-2 {
+    color: var(--color-dark);
+    background-color:var(--color-dark-3);
+    width: 100%;
+    margin-top: 2rem;
+    border-radius: 1rem;
+}
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    background-color: var(--color-dark);
+    padding: 1rem;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+
+}
+button {
+    height: 3rem;
+    width: 3rem;
+    display: grid;
+    place-items: center;
+    border-radius: 0.5rem;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--color-white-2);
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: var(--color-white-3);
+}
+select {
+    background-color: var(--color-dark-3);
+    color: var(--color-white-1);
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+#text-input {
+    outline: none;
+    margin-top: 1rem;
+    padding: 2rem;
+    height: fit-content;
+    min-height: 50vh;
+    color: var(--color-white-3);
+}
+
+#btn-save{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    background-color: var(--color-dark-3);
+    width: 7rem;
+    height: 3.5rem;
+}
