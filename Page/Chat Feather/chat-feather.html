@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        />
+        <!-- Google Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../../Css/main.css" />
+        <link rel="stylesheet" href="../../Css/navbar.css" />
+        <link rel="stylesheet" href="../../Css/aside.css" />
+        <link rel="stylesheet" href="chat-feather.css" />
+        <title>Form Editor</title>
+    </head>
+    <body>
+        <div class="container">
+            <nav>
+                <img
+                    class="logo"
+                    src="../../images/logo-feather-ai.png"
+                    alt="logo feather.ai"
+                />
+                <button>
+                    <img src="../../images/Icon copy.svg" alt="copy" />
+                    <p>create copy</p>
+                </button>
+                <button>
+                    <img src="../../images/Icon saved.svg" alt="save" />
+                    <p>save copies</p>
+                </button>
+                <div class="info">
+                    <img
+                        id="notification"
+                        src="../../images/Icon bing.svg"
+                        alt="bing"
+                    />
+                    <span></span>
+                    <div class="img">
+                        <img
+                            src="../../images/My personal photo.svg"
+                            alt="My personal photo"
+                        />
+                    </div>
+                    <ion-icon
+                        name="chevron-down-outline"
+                        id="btnProfileInfo"
+                    ></ion-icon>
+                    <div class="profile-info" id="profile-info">
+                        <div class="my-data">
+                            <img
+                                src="../../images/My personal photo.svg"
+                                alt="my personal photo"
+                            />
+                            <p>
+                                kirolos adel
+
+                                <br />
+                                <span> keroadel5@gmail.com </span>
+                            </p>
+                        </div>
+                        <ul>
+                            <li>
+                                <img
+                                    src="../../images/Icon language-2.svg"
+                                    alt="language icon"
+                                />
+                                <p>languages</p>
+                            </li>
+                            <li>
+                                <img
+                                    src="../../images/Icon person.svg"
+                                    alt="person icon"
+                                />
+                                <p>profile details</p>
+                            </li>
+                            <li>
+                                <img
+                                    src="../../images/Icon people.svg"
+                                    alt="people icon"
+                                />
+                                <p>team</p>
+                            </li>
+                            <li>
+                                <img
+                                    src="../../images/Icon Ask.svg"
+                                    alt="asking icon"
+                                />
+                                <p>ask the community</p>
+                            </li>
+                            <span class="hr"></span>
+                            <li>
+                                <img
+                                    src="../../images/Icon help.svg"
+                                    alt="helping icon"
+                                />
+                                <p>help center</p>
+                            </li>
+                            <li>
+                                <img
+                                    src="../../images/Icon log out.svg"
+                                    alt="log out icon"
+                                />
+                                <p>log out</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <section class="sec-home" id="main-page">
+                <aside id="aside-nav">
+                    <ul>
+                        <li id="btnToggleAside">
+                            <div>
+                                <ion-icon
+                                    name="chevron-forward-outline"
+                                ></ion-icon>
+                            </div>
+                        </li>
+                        <li id="asideLiSearch">
+                            <img
+                                src="../../images/Icon search.svg"
+                                alt="search"
+                            />
+                            <input type="text" placeholder="Search" />
+                        </li>
+                        <li>
+                            <a href="">
+                                <img
+                                    src="../../images/Icon dashboard.svg"
+                                    alt="dashboard"
+                                />
+                                <p>dashboard</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img
+                                    src="../../images/Icon edit.svg"
+                                    alt="long form editor"
+                                />
+                                <p>long form editor</p>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <img src="../../images/Icon chat.svg" alt="chat" />
+                            <p>chat feather</p>
+                        </li>
+                        <li>
+                            <img
+                                src="../../images/Icon email.svg"
+                                alt="email"
+                            />
+                            <p>email tools</p>
+                        </li>
+                        <li>
+                            <img
+                                src="../../images/Icon social.svg"
+                                alt="email"
+                            />
+                            <p>social media tools</p>
+                        </li>
+                        <li>
+                            <img
+                                src="../../images/Icon saved.svg"
+                                alt="saved"
+                            />
+                            <p>saved copies</p>
+                        </li>
+                        <li>
+                            <img
+                                src="../../images/Icon clock.svg"
+                                alt="activity"
+                            />
+                            <p>recent activity</p>
+                        </li>
+                        <li id="liTextAccount">
+                            <p id="textAccount">account</p>
+                        </li>
+                        <li>
+                            <img
+                                src="../../images/Icon language.svg"
+                                alt="language"
+                            />
+                            <p>change language</p>
+                        </li>
+                    </ul>
+                    <div id="themeToggle">
+                        <button id="light" class="active">
+                            <img src="../../images/icon sun.svg" alt="sun" />
+                            <p>light</p>
+                        </button>
+                        <button id="dark">
+                            <img src="../../images/icon moon.svg" alt="moon" />
+                            <p>dark</p>
+                        </button>
+                    </div>
+                </aside>
+                <div class="main-page">
+                    <div class="part-1">
+                        <div>
+                            <img
+                                src="../../images/chat-2.svg"
+                                alt="chat logo"
+                            />
+                        </div>
+                        <p>chat feather</p>
+                    </div>
+
+                    <div class="part-2">
+                        <div class="list-chats">
+                            <div id="search-chat">
+                                <img
+                                    src="../../images/Icon search.svg"
+                                    alt=""
+                                />
+                                <input type="text" placeholder="search" />
+                            </div>
+                            <hr />
+
+                            <div id="add-new-chat">
+                                <ion-icon name="add-outline"></ion-icon>
+                                <p>new chat</p>
+                            </div>
+                            <ul id="list-chats">
+                                <li>
+                                    <p>test chat</p>
+                                    <div class="icon">
+                                        <img
+                                            src="../../images/Icon ben.svg"
+                                            alt=""
+                                        />
+                                        <img
+                                            src="../../images/Icon  trash.svg"
+                                            alt=""
+                                        />
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>test chat</p>
+                                    <div class="icon">
+                                        <img
+                                            src="../../images/Icon ben.svg"
+                                            alt=""
+                                        />
+                                        <img
+                                            src="../../images/Icon  trash.svg"
+                                            alt=""
+                                        />
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>test chat</p>
+                                    <div class="icon">
+                                        <img
+                                            src="../../images/Icon ben.svg"
+                                            alt=""
+                                        />
+                                        <img
+                                            src="../../images/Icon  trash.svg"
+                                            alt=""
+                                        />
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="main-chat-feather">
+                            <div class="welcome">
+                                <p>Welcome to ChatFeather</p>
+                                <p>Your personalised AI-powered chatbot</p>
+                                <div class="some-features">
+                                    <div class="feature">
+                                        <div>
+                                            <img
+                                                src="../../images/Icon  ben-2.svg"
+                                                alt=""
+                                            />
+                                            <p>Ask complex questions</p>
+                                        </div>
+                                        <div>
+                                            <p>
+                                                "Tell me more about the upcoming
+                                                meteor event happening this
+                                                February 2023."
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="feature">
+                                        <div>
+                                            <img
+                                                src="../../images/Icon  image.svg"
+                                                alt=""
+                                            />
+                                            <p>Create digital artwork</p>
+                                        </div>
+                                        <div>
+                                            <p>
+                                                "Create an HD wallpaper with super cool sports car racing on the track."
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="feature">
+                                        <div>
+                                            <img
+                                                src="../../images/Icon  mic.svg"
+                                                alt=""
+                                            />
+                                            <p>Give voice commands</p>
+                                        </div>
+                                        <div>
+                                            <p>
+                                                "Hey ChatFeather, compare the iPhone 14 Pro with the iPhone 13 Pro."
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="feature">
+                                        <div>
+                                            <img
+                                                src="../../images/Icon  page.svg"
+                                                alt=""
+                                            />
+                                            <p>Generate professional content</p>
+                                        </div>
+                                        <div>
+                                            <p>
+                                                "Write a high-converting landing page headline and sub headline for ChatSonic."
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="some-prompts">
+                                <div>
+                                    <p id="hide-prompts" >hide prompts</p>
+                                    <ion-icon id="hide" name="chevron-down-outline"></ion-icon>
+                                    <ion-icon id="reload-prompts" name="reload-outline"></ion-icon>
+                                </div>
+                                <ul id="list-prompts">
+                                    <li>test text</li>
+                                    <li>test text</li>
+                                    <li>test text</li>
+                                    <li>test text</li>
+                                    <li>test text</li>
+                                </ul>
+                            </div>
+                            <div class="chat-with-ai">
+                                <div class="message me">
+                                    <div class="img">
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <p>
+                                            test
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="message ai">
+                                    <div class="img">
+                                        <img src="../../images/robot.svg" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <p>
+                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae laboriosam asperiores tempore ex, ratione dolorum? Tenetur porro dolore eligendi ipsam totam, minus nostrum, adipisci hic optio quia non, doloremque alias?
+                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae laboriosam asperiores tempore ex, ratione dolorum? Tenetur porro dolore eligendi ipsam totam, minus nostrum, adipisci hic optio quia non, doloremque alias?
+                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae laboriosam asperiores tempore ex, ratione dolorum? Tenetur porro dolore eligendi ipsam totam, minus nostrum, adipisci hic optio quia non, doloremque alias?
+                                        </p>
+                                        <div class="copy">
+                                            <ion-icon name="copy-outline"></ion-icon>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-chat">
+                                <img id="mic" src="../../images/Icon  mic-2.svg" alt="">
+                                <input type="text" placeholder="write a message">
+                                <div class="sent">
+                                    <img src="../../images/Icon  sent.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script
+            nomodule
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+        ></script>
+        <script src="../../Js/main.js"></script>
+        <script src="chat-feather.js"></script>
+    </body>
+</html>

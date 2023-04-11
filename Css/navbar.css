@@ -27,6 +27,10 @@ nav button{
     transition: 0.3s;
 }
 
+nav button img{
+    width: 2rem;
+}
+
 nav button:hover{
     background-color: #3a3d41;
 }
@@ -41,6 +45,10 @@ nav .info{
     gap: 1rem;
     font-size: 2.2rem;
     color: var(--color-white-2);
+}
+
+nav .info #notification{
+    width: 3.3rem;
 }
 
 nav .info ion-icon{
