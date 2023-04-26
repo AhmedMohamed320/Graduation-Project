@@ -11,12 +11,12 @@
     --color-dark: #141414;
     --color-dark-2: #212121cc;
     --color-dark-3: #292D32;
+    --color-dark-4: #D9D9D91F;
     --color-main: #ec704d;
     --color-main-2:#EC704D80;
     --color-white-1: #fff;
     --color-white-2: #b4b4b4;
     --color-white-3: #d9d9d971;
-
 }
 
 html {
@@ -39,6 +39,10 @@ body {
     html {
         font-size: 50%;
     }
+}
+
+button{
+    cursor: pointer;
 }
 
 .sec-home {
