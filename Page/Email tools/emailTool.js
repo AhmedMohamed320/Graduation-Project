@@ -16,22 +16,22 @@ let emailsSaved = [
         [Name/Company] Team
         `
     },
-    // {
-    //     id:2,
-    //     content:`
-    //     Welcome to [Product/Service Name]! 
-    //     Dear [Name], 
+    {
+        id:2,
+        content:`
+        Welcome to [Product/Service Name]! 
+        Dear [Name], 
     
-    //     We are excited to welcome you as a new customer of [Product/Service Name]! We believe that our [Product/Service] will be an essential part of your journey ahead. 
+        We are excited to welcome you as a new customer of [Product/Service Name]! We believe that our [Product/Service] will be an essential part of your journey ahead. 
     
-    //     As a courtesy, [add any details about any special offers]. To learn more about [Product/Service Name], we invite you to explore our website and feel free to contact our team of experts with any questions that may arise. 
+        As a courtesy, [add any details about any special offers]. To learn more about [Product/Service Name], we invite you to explore our website and feel free to contact our team of experts with any questions that may arise. 
     
-    //     We hope your experience with us is both enjoyable and beneficial!
+        We hope your experience with us is both enjoyable and beneficial!
     
-    //     Warm regards, 
-    //     [Name/Company] Team
-    //     `
-    // }
+        Warm regards, 
+        [Name/Company] Team
+        `
+    }
 ];
 
 emailsSaved.forEach(element => {
