@@ -157,28 +157,34 @@ createAside.innerHTML = `
         </a>
     </li>
     <li>
-        <img
-            src="../../images/Icon saved.svg"
-            alt="saved"
-        />
-        <p>saved copies</p>
+        <a href="../Saved Copies/savedCopies.html">
+            <img
+                src="../../images/Icon saved.svg"
+                alt="saved"
+            />
+            <p>saved copies</p>
+        </a>
     </li>
     <li>
-        <img
-            src="../../images/Icon clock.svg"
-            alt="activity"
-        />
-        <p>recent activity</p>
+        <a href="../Recent Activity/recentActivity.html">
+            <img
+                src="../../images/Icon clock.svg"
+                alt="activity"
+            />
+            <p>recent activity</p>
+        </a>
     </li>
     <li id="liTextAccount">
         <p id="textAccount">account</p>
     </li>
     <li>
-        <img
-            src="../../images/Icon language.svg"
-            alt="language"
-        />
-        <p>change language</p>
+        <a href="../Change Language/changeLanguage.html">
+            <img
+                src="../../images/Icon language.svg"
+                alt="language"
+            />
+            <p>change language</p>
+        </a>
     </li>
 </ul>
 <div id="themeToggle">
