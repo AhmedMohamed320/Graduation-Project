@@ -151,11 +151,10 @@ createAside.innerHTML = `
         </a>
     </li>
     <li>
-        <img
-            src="../../images/Icon social.svg"
-            alt="email"
-        />
-        <p>social media tools</p>
+        <a href="../Social media tool/socialMediaTool.html">
+            <img src="../../images/Icon social.svg" alt="email"/>
+            <p>social media tool</p>
+        </a>
     </li>
     <li>
         <img
