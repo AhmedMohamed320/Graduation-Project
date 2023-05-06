@@ -10,12 +10,16 @@ createNav.innerHTML = `
     alt="logo feather.ai"
 />
 <button>
-    <img src="../../images/Icon copy.svg" alt="copy" />
-    <p>create copy</p>
+    <a>
+        <img src="../../images/Icon copy.svg" alt="copy" />
+        <p>create copy</p>
+    </a>
 </button>
 <button>
-    <img src="../../images/Icon saved.svg" alt="save" />
-    <p>save copies</p>
+    <a href="../Page/Saved Copies/savedCopies.html">
+        <img src="../../images/Icon saved.svg" alt="save" />
+        <p>save copies</p>
+    </a>
 </button>
 <div class="info">
     <img

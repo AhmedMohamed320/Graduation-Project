@@ -9,7 +9,7 @@ InputChat.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
         createChatAi();
     }
-});
+});  
 
 sentMessage.addEventListener("click", function () {
     createChatAi();
@@ -83,3 +83,10 @@ function autoReply() {
 function scrollBottom() {
     divChatWithAi.scrollTo(0, divChatWithAi.scrollHeight);
 }
+
+document.addEventListener("keydown", function (event) {
+    if (event.code === "Space") {
+        event.preventDefault();
+        InputChat.focus();
+    }
+});

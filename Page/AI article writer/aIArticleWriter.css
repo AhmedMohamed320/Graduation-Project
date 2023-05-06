@@ -1,3 +1,21 @@
+.part-1{
+    position: relative;
+}
+
+.part-1 > div:nth-of-type(2){
+    position: absolute;
+    right: 0;
+}
+
+.part-1 > div:nth-of-type(2) a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-main);
+    padding: 1rem;
+    border-radius: 50%;
+}
+
 .part-2 {
     gap: 2rem;
 }
@@ -27,7 +45,7 @@
 }
 
 .steps .step-by-step {
-    padding: 2rem;
+    padding: 2rem 0;
     justify-content: center;
 }
 
@@ -45,7 +63,7 @@
 }
 
 .steps .step-by-step span {
-    width: 5rem;
+    width: 4rem;
     height: 0.5rem;
     background-color: var(--color-white-1-2);
     border-radius: 2rem;
