@@ -13,6 +13,10 @@
             href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
             rel="stylesheet"
         />
+        <link
+            href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+            rel="stylesheet"
+        />
         <link rel="stylesheet" href="../../Css/main.css" />
         <link rel="stylesheet" href="../../Css/navbar.css" />
         <link rel="stylesheet" href="../../Css/aside.css" />
@@ -41,96 +45,211 @@
                     </div>
 
                     <div class="part-2">
-                        <div class="options">
-                            <button id="undo" class="option-button">
-                                <i class="fa-solid fa-rotate-left"></i>
-                            </button>
-                            <button id="redo" class="option-button">
-                                <i class="fa-solid fa-rotate-right"></i>
-                            </button>
-                            <button id="bold" class="option-button format">
-                                <i class="fa-solid fa-bold"></i>
-                            </button>
-                            <button id="italic" class="option-button format">
-                                <i class="fa-solid fa-italic"></i>
-                            </button>
-                            <button id="underline" class="option-button format">
-                                <i class="fa-solid fa-underline"></i>
-                            </button>
-                            <button
-                                id="strikethrough"
-                                class="option-button format"
-                            >
-                                <i class="fa-solid fa-strikethrough"></i>
-                            </button>
-                            <button
-                                id="superscript"
-                                class="option-button script"
-                            >
-                                <i class="fa-solid fa-superscript"></i>
-                            </button>
-                            <button id="subscript" class="option-button script">
-                                <i class="fa-solid fa-subscript"></i>
-                            </button>
-                            <button
-                                id="insertOrderedList"
-                                class="option-button"
-                            >
-                                <div class="fa-solid fa-list-ol"></div>
-                            </button>
-                            <button
-                                id="insertUnorderedList"
-                                class="option-button"
-                            >
-                                <i class="fa-solid fa-list"></i>
-                            </button>
-                            <button id="createLink" class="adv-option-button">
-                                <i class="fa fa-link"></i>
-                            </button>
-                            <button id="unlink" class="option-button">
-                                <i class="fa fa-unlink"></i>
-                            </button>
-                            <button
-                                id="justifyLeft"
-                                class="option-button align"
-                            >
-                                <i class="fa-solid fa-align-left"></i>
-                            </button>
-                            <button
-                                id="justifyCenter"
-                                class="option-button align"
-                            >
-                                <i class="fa-solid fa-align-center"></i>
-                            </button>
-                            <button
-                                id="justifyRight"
-                                class="option-button align"
-                            >
-                                <i class="fa-solid fa-align-right"></i>
-                            </button>
-                            <button
-                                id="justifyFull"
-                                class="option-button align"
-                            >
-                                <i class="fa-solid fa-align-justify"></i>
-                            </button>
-                            <button id="indent" class="option-button spacing">
-                                <i class="fa-solid fa-indent"></i>
-                            </button>
-                            <button id="outdent" class="option-button spacing">
-                                <i class="fa-solid fa-outdent"></i>
-                            </button>
-                            <select
-                                id="fontName"
-                                class="adv-option-button"
-                            ></select>
-                            <button id="btn-save">
-                                <i class="fa-solid fa-bookmark"></i>
-                                save
-                            </button>
+                        <div class="toolbar">
+                            <div class="btn-toolbar">
+                                <button onclick="formatDoc('undo')">
+                                    <i class="bx bx-undo"></i>
+                                </button>
+                                <button onclick="formatDoc('redo')">
+                                    <i class="bx bx-redo"></i>
+                                </button>
+                                <button onclick="formatDoc('bold')">
+                                    <i class="bx bx-bold"></i>
+                                </button>
+                                <button onclick="formatDoc('underline')">
+                                    <i class="bx bx-underline"></i>
+                                </button>
+                                <button onclick="formatDoc('italic')">
+                                    <i class="bx bx-italic"></i>
+                                </button>
+                                <button onclick="formatDoc('strikeThrough')">
+                                    <i class="bx bx-strikethrough"></i>
+                                </button>
+                                <button onclick="formatDoc('justifyLeft')">
+                                    <i class="bx bx-align-left"></i>
+                                </button>
+                                <button onclick="formatDoc('justifyCenter')">
+                                    <i class="bx bx-align-middle"></i>
+                                </button>
+                                <button onclick="formatDoc('justifyRight')">
+                                    <i class="bx bx-align-right"></i>
+                                </button>
+                                <button onclick="formatDoc('justifyFull')">
+                                    <i class="bx bx-align-justify"></i>
+                                </button>
+                                <button
+                                    onclick="formatDoc('insertOrderedList')"
+                                >
+                                    <i class="bx bx-list-ol"></i>
+                                </button>
+                                <button
+                                    onclick="formatDoc('insertUnorderedList')"
+                                >
+                                    <i class="bx bx-list-ul"></i>
+                                </button>
+                                <button onclick="addLink()">
+                                    <i class="bx bx-link"></i>
+                                </button>
+                                <button onclick="formatDoc('unlink')">
+                                    <i class="bx bx-unlink"></i>
+                                </button>
+                            </div>
+                            <div class="head">
+                                <select
+                                    onchange="formatDoc('fontSize', this.value); this.selectedIndex=0;"
+                                >
+                                    <option
+                                        value=""
+                                        selected=""
+                                        hidden=""
+                                        disabled=""
+                                    >
+                                        Font size
+                                    </option>
+                                    <option value="1">Extra small</option>
+                                    <option value="2">Small</option>
+                                    <option value="3">Regular</option>
+                                    <option value="4">Medium</option>
+                                    <option value="5">Large</option>
+                                    <option value="6">Extra Large</option>
+                                    <option value="7">Big</option>
+                                </select>
+                                <button id="btn-save">
+                                    <i class="fa-solid fa-bookmark"></i>
+                                    save
+                                </button>
+                            </div>
                         </div>
-                        <div id="text-input" contenteditable="true">
-                            untitled
+                        <div class="mainContent">
+                            <p class="heading"></p>
+
+                            <div
+                                id="content"
+                                contenteditable="true"
+                                spellcheck="false"
+                            >
+                                Lorem, ipsum.
+                            </div>
+                            <div>
+                                <input
+                                    id="pressSpace"
+                                    type="text"
+                                    placeholder="Press 'space' for Al ..... "
+                                    readonly
+                                />
+                                <div class="askFeather">
+                                    <div class="input">
+                                        <img
+                                            src="../../images/star.svg"
+                                            alt=""
+                                        />
+                                        <input
+                                            id="inputDraftWithAi"
+                                            type="text"
+                                            placeholder="Ask Feather.Al to write anything..."
+                                        />
+                                        <div class="icon">
+                                            <ion-icon
+                                                name="arrow-up-outline"
+                                            ></ion-icon>
+                                        </div>
+                                    </div>
+                                    <div class="select step1">
+                                        <p>Draft with Al</p>
+                                        <div>
+                                            <div class="option">
+                                                <img
+                                                    src="../../images/icon ben-2.svg"
+                                                    alt=""
+                                                />
+                                                <p>Brainstorm ideas...</p>
+                                            </div>
+                                            <div class="option">
+                                                <img
+                                                    src="../../images/icon ben-2.svg"
+                                                    alt=""
+                                                />
+                                                <p>Blog post...</p>
+                                            </div>
+                                            <div class="option">
+                                                <img
+                                                    src="../../images/icon ben-2.svg"
+                                                    alt=""
+                                                />
+                                                <p>Outline...</p>
+                                            </div>
+                                            <div class="option">
+                                                <img
+                                                    src="../../images/icon ben-2.svg"
+                                                    alt=""
+                                                />
+                                                <p>Social media post...</p>
+                                            </div>
+                                            <div class="option">
+                                                <img
+                                                    src="../../images/icon ben-2.svg"
+                                                    alt=""
+                                                />
+                                                <p>Press release...</p>
+                                            </div>
+                                            <div class="option">
+                                                <img
+                                                    src="../../images/icon ben-2.svg"
+                                                    alt=""
+                                                />
+                                                <p>Creative story...</p>
+                                            </div>
+                                            <div class="option">
+                                                <img
+                                                    src="../../images/icon ben-2.svg"
+                                                    alt=""
+                                                />
+                                                <p>Essay...</p>
+                                            </div>
+                                            <div class="optionEnd seeMore">
+                                                <p>....</p>
+                                                <p>see more</p>
+                                                <ion-icon
+                                                    name="chevron-forward-outline"
+                                                ></ion-icon>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="select step2">
+                                        <div>
+                                            <div class="option">
+                                                <ion-icon
+                                                    name="checkmark-outline"
+                                                ></ion-icon>
+                                                <p>Done</p>
+                                            </div>
+                                            <div class="option">
+                                                <img
+                                                    src="../../images/icon ben-2.svg"
+                                                    alt=""
+                                                />
+                                                <p>Brainstorm ideas...</p>
+                                            </div>
+                                            <div class="option">
+                                                <img
+                                                    src="../../images/option.svg"
+                                                    alt=""
+                                                />
+                                                <p>Make longer</p>
+                                            </div>
+                                            <span class="hr"></span>
+                                            <div class="option reload">
+                                                <ion-icon name="reload-outline"></ion-icon>
+                                                <p>try again</p>
+                                            </div>
+                                            <div class="option close">
+                                                <ion-icon name="close-outline"></ion-icon>
+                                                <p>close</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
