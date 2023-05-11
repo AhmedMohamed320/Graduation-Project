@@ -16,7 +16,7 @@ createNav.innerHTML = `
     </a>
 </button>
 <button>
-    <a href="../Page/Saved Copies/savedCopies.html">
+    <a href="../Saved Copies/savedCopies.html">
         <img src="../../images/Icon saved.svg" alt="save" />
         <p>save copies</p>
     </a>
