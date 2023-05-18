@@ -4,11 +4,14 @@ const mainPage = document.querySelector(".sec-home");
 // nav ----------------------------------
 const createNav = document.createElement("nav");
 createNav.innerHTML = `
+<a href="../../../index.html">
 <img
-    class="logo"
-    src="../../images/logo-feather-ai.png"
-    alt="logo feather.ai"
+class="logo"
+src="../../images/feather ai logo.svg"
+alt="logo feather.ai"
 />
+</a>
+
 <button>
     <a>
         <img src="../../images/Icon copy.svg" alt="copy" />

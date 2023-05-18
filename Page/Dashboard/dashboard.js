@@ -40,7 +40,7 @@ const arrOfAllTemplates=[
 
     },
     {
-        img:"../../images/content rephrase.svg",
+        img:"../../images/content rephase.svg",
         heading:"content rephrase",
         text:`Detailed article outlines that help you write better content on a consistent basis.`,
 
