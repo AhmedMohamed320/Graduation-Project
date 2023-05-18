@@ -11,9 +11,13 @@ section .form{
     padding: 0rem 3rem ;
 }
 
-section .form>img{
+section .form> a{
     padding: 3rem 0 1rem 0;
     width: 15rem;
+}
+
+section .form> a img{
+    width: 100%;
 }
 
 section .form>button{
