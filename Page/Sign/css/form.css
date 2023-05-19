@@ -9,6 +9,9 @@ section .form{
     flex-direction: column;
     gap: 2rem;
     padding: 0rem 3rem ;
+    max-height: 90vh;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 section .form> a{
