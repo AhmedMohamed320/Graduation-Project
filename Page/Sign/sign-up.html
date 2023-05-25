@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="../../Css/main.css" />
-        <link rel="stylesheet" href="css/form.css">
+        <link rel="stylesheet" href="css/form.css" />
         <link rel="stylesheet" href="css/sign-up.css" />
         <title>Sign up</title>
     </head>
@@ -20,30 +20,59 @@
                             alt="logo feather ai"
                         />
                     </a>
-                    <button>
+                    <a href="#" class="signWith">
                         <ion-icon name="logo-google"></ion-icon>
                         <p>sign in with GOOGLE</p>
-                    </button>
+                    </a>
 
-                    <button>
+                    <a href="#" class="signWith">
                         <ion-icon name="logo-apple"></ion-icon>
                         <p>sign in with apple</p>
-                    </button>
+                    </a>
 
                     <p>or continue with</p>
 
                     <form action="">
                         <label for="username">full name</label>
-                        <input type="text" name="username" id="" placeholder="Enter your full name here"/>
+                        <input
+                            type="text"
+                            name="username"
+                            id="inputUsername"
+                            placeholder="Enter your full name here"
+                        />
+                        <span class="error" id="username-error"></span>
                         <label for="email">business email</label>
-                        <input type="email" name="email" id="" placeholder="user@example.com"/>
-                        <button type="submit">sign up with OTP</button>
-                        <button type="submit">sign up with password</button>
+                        <input
+                            type="email"
+                            name="email"
+                            id="inputEmail"
+                            placeholder="user@example.com"
+                        />
+                        <label for="password" id="password-label"
+                            >password</label
+                        >
+                        <input
+                            type="password"
+                            name="password"
+                            id="password"
+                            placeholder="Enter your password"
+                        />
+                        <span class="error" id="error">
+                            <ion-icon name="alert-circle"></ion-icon>
+                            <p>this field is not valid</p>
+                        </span>
+                        <button>sign up with OTP</button>
+                        <button id="signWithPassword">
+                            sign up with password
+                        </button>
                     </form>
 
-                    <p>already have an account? <span>
-                        <a href="#">sign in</a>
-                    </span></p>
+                    <p>
+                        already have an account?
+                        <span>
+                            <a href="#">sign in</a>
+                        </span>
+                    </p>
                 </div>
                 <div class="img">
                     <img
@@ -62,5 +91,7 @@
             nomodule
             src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
         ></script>
+
+        <script src="sign.js"></script>
     </body>
 </html>

@@ -25,15 +25,15 @@
                         <p>welcome back</p>
                         <p>have we met before?</p>
                     </div>
-                    <button>
+                    <a href="#" class="signWith">
                         <ion-icon name="logo-google"></ion-icon>
                         <p>sign in with GOOGLE</p>
-                    </button>
+                    </a>
 
-                    <button>
+                    <a href="#" class="signWith">
                         <ion-icon name="logo-apple"></ion-icon>
                         <p>sign in with apple</p>
-                    </button>
+                    </a>
 
                     <p>or continue with</p>
 
@@ -42,11 +42,26 @@
                         <input
                             type="email"
                             name="email"
-                            id=""
+                            id="inputEmail"
                             placeholder="user@example.com"
                         />
-                        <button type="submit">sign in with OTP</button>
-                        <button type="submit">sign in with password</button>
+                        <label for="password" id="password-label"
+                            >password</label
+                        >
+                        <input
+                            type="password"
+                            name="password"
+                            id="password"
+                            placeholder="Enter your password"
+                        />
+                        <span class="error active" id="email-error">
+                            <ion-icon name="alert-circle"></ion-icon>
+                            <p>this field is not valid</p>
+                        </span>
+                        <button>sign in with OTP</button>
+                        <button id="signWithPassword">
+                            sign in with password
+                        </button>
                     </form>
 
                     <p>
@@ -73,5 +88,7 @@
             nomodule
             src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
         ></script>
+
+        <script src="sign.js"></script>
     </body>
 </html>
