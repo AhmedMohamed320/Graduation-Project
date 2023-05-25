@@ -226,3 +226,15 @@ window.addEventListener("click", function (event) {
         profileInfo.classList.remove("active");
     }
 });
+// ---------------------------
+const currentUrl = window.location.href;
+const links = document.querySelectorAll("aside ul li a");
+for (let i = 0; i < links.length; i++) {
+    const link = links[i];
+    const url = link.href;
+
+    if (currentUrl === url) {
+        link.parentElement.classList.add("active");
+        break;
+    }
+}
