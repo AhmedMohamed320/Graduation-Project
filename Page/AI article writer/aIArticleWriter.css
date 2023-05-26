@@ -102,14 +102,14 @@
     gap: 1rem;
 }
 
-form label{
+label{
     display: flex;
     align-items: center;
     gap: 1rem;
     font-size: 1.4rem;
 }
 
-form input{
+input{
     background-color: transparent;
     color: var(--color-white-2);
     border: 1px solid var(--color-white-3);
@@ -118,7 +118,7 @@ form input{
     outline: none;
 }
 
-form button{
+button{
     height: 4rem;
     display: flex;
     align-items: center;
@@ -132,7 +132,7 @@ form button{
     font-size: 1.6rem;
 }
 
-form button.valid{
+button.valid{
     background-color: var(--color-main);
     color: var(--color-dark);
 

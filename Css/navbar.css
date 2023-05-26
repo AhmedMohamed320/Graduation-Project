@@ -129,12 +129,14 @@ nav .info .profile-info ul{
     padding: 1.5rem 0;
 }
 
-nav .info .profile-info ul li{
+nav .info .profile-info ul li a,nav .info .profile-info ul li{
     display: flex;
     align-items: center;
     justify-content: flex-start;
     gap: 1rem;
     cursor: pointer;
+    color: var(--color-white-1);
+    text-decoration: none;
 }
 
 nav .info .profile-info ul li ion-icon{

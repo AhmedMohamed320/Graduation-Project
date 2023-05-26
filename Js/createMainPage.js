@@ -94,11 +94,14 @@ createNav.innerHTML = `
                 <p>help center</p>
             </li>
             <li>
-                <img
-                    src="../../images/Icon log out.svg"
-                    alt="log out icon"
-                />
-                <p>log out</p>
+                <a href="#">
+                    <img
+                        src="../../images/Icon log out.svg"
+                        alt="log out icon"
+                    />
+                    <p>log out</p>
+                </a>
+                
             </li>
         </ul>
     </div>
