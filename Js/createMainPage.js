@@ -33,7 +33,7 @@ alt="logo feather.ai"
     <span></span>
     <div class="img">
         <img
-            src="../../images/My personal photo.svg"
+            src="../../images/3425.jpg"
             alt="My personal photo"
         />
     </div>
@@ -43,10 +43,12 @@ alt="logo feather.ai"
     ></ion-icon>
     <div class="profile-info" id="profile-info">
         <div class="my-data">
-            <img
-                src="../../images/My personal photo.svg"
+            <div class="img">
+                <img
+                src="../../images/3425.jpg"
                 alt="my personal photo"
-            />
+                />
+            </div>
             <p>
                 kirolos adel
 
@@ -194,16 +196,6 @@ createAside.innerHTML = `
         </a>
     </li>
 </ul>
-<div id="themeToggle">
-    <button id="light" class="active">
-        <img src="../../images/icon sun.svg" alt="sun" />
-        <p>light</p>
-    </button>
-    <button id="dark">
-        <img src="../../images/icon moon.svg" alt="moon" />
-        <p>dark</p>
-    </button>
-</div>
 `;
 mainPage.prepend(createAside);
 

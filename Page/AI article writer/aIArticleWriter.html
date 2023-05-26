@@ -35,9 +35,9 @@
                         <div>
                             <a href="">
                                 <img
-                                src="../../images/Icon  video.svg"
-                                alt="icon video"
-                            />
+                                    src="../../images/Icon  video.svg"
+                                    alt="icon video"
+                                />
                             </a>
                         </div>
                     </div>
@@ -54,26 +54,27 @@
                                 </div>
                                 <div class="step-by-step">
                                     <div class="one active">
-                                        <p>1</p>
+                                        <p class="stepNum">1</p>
                                         <p>KEYWORDS</p>
                                     </div>
                                     <span></span>
                                     <div class="two">
-                                        <p>2</p>
+                                        <p class="stepNum">2</p>
                                         <p>IDEAS</p>
                                     </div>
                                     <span></span>
                                     <div class="three">
-                                        <p>3</p>
+                                        <p class="stepNum">3</p>
                                         <p>OUTLINE</p>
                                     </div>
                                     <span></span>
                                     <div class="four">
-                                        <p>4</p>
+                                        <p class="stepNum">4</p>
                                         <p>ARTICLE</p>
                                     </div>
                                 </div>
                             </div>
+                            <!-- ------------------step 1 ----------- -->
                             <div class="complete-the-fields">
                                 <div class="head">
                                     <img
@@ -91,12 +92,18 @@
                                         />
                                     </label>
 
-                                    <input type="text" placeholder="UX" />
-                                    <button type="submit">
-                                        <img
-                                            src="../../images/search-2.svg"
-                                            alt=""
-                                        />
+                                    <input
+                                        type="text"
+                                        placeholder="UX"
+                                        class="inputSearchKeywords"
+                                    />
+                                    <button
+                                        type="submit"
+                                        class="btnSearchKeywords"
+                                    >
+                                        <ion-icon
+                                            name="search-outline"
+                                        ></ion-icon>
                                         <p>search keywords</p>
                                     </button>
                                 </form>
@@ -115,15 +122,74 @@
                                     <input
                                         type="text"
                                         placeholder="Add a tag..."
+                                        class="inputAddTag"
                                     />
-                                    <button type="submit">
+                                    <div class="someKeyWords">
+                                        
+                                        
+                                    </div>
+                                    <button class="btnNext">
                                         <p>next</p>
-                                        <img src="../../images/next video.svg" alt="" />
+                                        <ion-icon
+                                            name="paper-plane-outline"
+                                        ></ion-icon>
                                     </button>
                                 </form>
                             </div>
                         </div>
-                        <div class="part-2-2"></div>
+                        <div class="part-2-2">
+                            <div class="empty">
+                                <img
+                                    src="../../images/img empty ai article.svg"
+                                    alt="no article"
+                                />
+                                <p>
+                                    Your copies created by artificial
+                                    intelligence will appear here.
+                                </p>
+                            </div>
+                            <!-- ------------------- -->
+                            <div class="divAllKeyWords">
+                                <ul>
+                                    <li>
+                                        <div class="select">
+                                            <span>
+                                                <ion-icon
+                                                    name="checkmark-outline"
+                                                ></ion-icon>
+                                            </span>
+                                            <p class="KeywordsText">
+                                                ux designer
+                                            </p>
+                                        </div>
+                                        <div class="details">
+                                            <p>49 words / 224 character</p>
+                                            <!-- <div class="edit">
+                                                <img src="../../images/copy.svg" alt="" class="imgCopy">
+                                                <img src="../../images/Icon  trash.svg" alt="" class="imgDelete">
+                                                <img src="../../images/Icon ben.svg" alt="" class="imgEdit">
+                                            </div> -->
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="select">
+                                            <span>
+                                                <ion-icon
+                                                    name="checkmark-outline"
+                                                ></ion-icon>
+                                            </span>
+                                            <p class="KeywordsText">
+                                                ux designer
+                                            </p>
+                                        </div>
+                                        <div class="details">
+                                            <p>49 words / 224 character</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -138,7 +204,6 @@
             src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
         ></script>
         <script src="../../Js/createMainPage.js"></script>
-        <script src="../../Js/main.js"></script>
-        <script src="socialMediaTool.js"></script>
+        <script src="aIArticleWriter.js"></script>
     </body>
 </html>

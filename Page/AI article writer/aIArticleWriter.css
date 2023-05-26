@@ -18,6 +18,7 @@
 
 .part-2 {
     gap: 2rem;
+    overflow-y: auto;
 }
 .steps,
 .complete-the-fields,
@@ -123,11 +124,18 @@ form button{
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    background-color: var(--color-main);
+    background-color: transparent;
+    color: var(--color-white-3);
     outline: none;
     border: none;
     border-radius: 1rem;
     font-size: 1.6rem;
+}
+
+form button.valid{
+    background-color: var(--color-main);
+    color: var(--color-dark);
+
 }
 
 .or{
@@ -151,4 +159,124 @@ form button{
     font-size: 1.5rem;
     font-weight: 200;
     text-align: center;
+}
+/* ------------------------ */
+
+.someKeyWords{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.someKeyWords div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5rem;
+    background-color: var(--color-main-2);
+    color: var(--color-main);
+}
+
+.someKeyWords div ion-icon{
+    margin-top: 0.2rem;
+    cursor: pointer;
+}
+
+
+/* ------------------------ */
+.part-2-2{
+    position: relative;
+}
+
+.empty{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    font-size: 1.5rem;
+    color: var(--color-white-3);
+    max-width: 40rem;
+    text-align: center;
+    line-height: 2.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* ------------------------------- */
+.divAllKeyWords{
+    display: none;
+}
+
+.divAllKeyWords ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.divAllKeyWords ul li{
+    padding: 2rem;
+    border-radius: 1rem;
+    font-size: 1.8rem;
+    list-style: none;
+    background-color: var(--color-dark-4);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.26) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.048) 0px 0px 0px 1px inset;
+    cursor: pointer;
+}
+
+.divAllKeyWords ul li .select{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.divAllKeyWords ul li .select span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.3rem;
+    border: 1px solid var(--color-white-3);
+    border-radius: 0.7rem;
+    font-size: 1.8rem;
+}
+
+.divAllKeyWords ul .details{
+    margin-top: 1rem;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.divAllKeyWords ul li.active{
+    border: 1px solid var(--color-main);
+    background-color: var(--color-main-2);
+    color: var(--color-main);
+}
+
+.divAllKeyWords ul li.active span{
+    border: none;
+    background-color: var(--color-main);
+    color: var(--color-white-1);
+}
+
+.divAllKeyWords ul li .edit{
+    display: none;
+}
+
+.divAllKeyWords ul li.active .edit{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.divAllKeyWords ul li .edit img{
+    width: 1.5rem;
+    cursor: pointer;
 }
