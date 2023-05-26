@@ -33,12 +33,12 @@ aside ul li {
     align-items: center;
     justify-content: center;
     gap: 2rem;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-weight: 300;
     padding: 1.5rem;
     border-radius: 1rem;
     cursor: pointer;
-
+    
 }
 
 aside ul li a{
