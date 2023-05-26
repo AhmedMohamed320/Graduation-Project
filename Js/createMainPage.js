@@ -5,11 +5,11 @@ const mainPage = document.querySelector(".sec-home");
 const createNav = document.createElement("nav");
 createNav.innerHTML = `
 <a href="../../../index.html">
-<img
-class="logo"
-src="../../images/feather ai logo.svg"
-alt="logo feather.ai"
-/>
+    <img
+    class="logo"
+    src="../../images/feather ai logo.svg"
+    alt="logo feather.ai"
+    />
 </a>
 
 <button>
