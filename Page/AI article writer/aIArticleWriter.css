@@ -1,13 +1,13 @@
-.part-1{
+.part-1 {
     position: relative;
 }
 
-.part-1 > div:nth-of-type(2){
+.part-1>div:nth-of-type(2) {
     position: absolute;
     right: 0;
 }
 
-.part-1 > div:nth-of-type(2) a{
+.part-1>div:nth-of-type(2) a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,6 +20,7 @@
     gap: 2rem;
     overflow-y: auto;
 }
+
 .steps,
 .complete-the-fields,
 .part-2-2 {
@@ -30,7 +31,7 @@
 
 .part-2-1 {
     display: grid;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: minmax(0,17rem) 1fr;
     gap: 2rem;
 }
 
@@ -39,6 +40,10 @@
     display: flex;
     align-items: center;
     gap: 1rem;
+}
+
+.steps {
+    max-height: 17rem;
 }
 
 .head p {
@@ -69,16 +74,17 @@
     background-color: var(--color-white-1-2);
     border-radius: 2rem;
 }
+
 .steps .step-by-step div.active {
     color: var(--color-main);
     background: #ffcec0;
 }
 
-.steps .step-by-step span.active{
+.steps .step-by-step span.active {
     background: #ffcec0;
 }
 
-.steps .step-by-step div>p:nth-of-type(2){
+.steps .step-by-step div>p:nth-of-type(2) {
     font-size: 1.2rem;
     position: absolute;
     bottom: -2.5rem;
@@ -86,30 +92,30 @@
 
 /* --------------------- */
 
-.complete-the-fields{
+.complete-the-fields {
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
-.complete-the-fields .head{
+.complete-the-fields .head {
     margin-bottom: 1rem;
 }
 
-.complete-the-fields form{
+.complete-the-fields form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-label{
+label {
     display: flex;
     align-items: center;
     gap: 1rem;
     font-size: 1.4rem;
 }
 
-input{
+input {
     background-color: transparent;
     color: var(--color-white-2);
     border: 1px solid var(--color-white-3);
@@ -118,7 +124,7 @@ input{
     outline: none;
 }
 
-button{
+button {
     height: 4rem;
     display: flex;
     align-items: center;
@@ -132,44 +138,46 @@ button{
     font-size: 1.6rem;
 }
 
-button.valid{
+button.valid {
     background-color: var(--color-main);
     color: var(--color-dark);
 
 }
 
-.or{
+.or {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.or p{
+.or p {
     font-size: 1.5rem;
     text-align: center;
     width: 20%;
 }
-.or span{
+
+.or span {
     width: 40%;
     height: 1px;
     background-color: var(--color-white-3);
 }
 
-.complete-the-fields>p{
+.complete-the-fields>p {
     font-size: 1.5rem;
     font-weight: 200;
     text-align: center;
 }
+
 /* ------------------------ */
 
-.someKeyWords{
+.someKeyWords {
     display: flex;
     align-items: center;
     gap: 1rem;
     flex-wrap: wrap;
 }
 
-.someKeyWords div{
+.someKeyWords div {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -181,18 +189,19 @@ button.valid{
     color: var(--color-main);
 }
 
-.someKeyWords div ion-icon{
+.someKeyWords div ion-icon {
     margin-top: 0.2rem;
     cursor: pointer;
 }
 
 
 /* ------------------------ */
-.part-2-2{
+.part-2-2 {
     position: relative;
+    overflow-y: auto;
 }
 
-.empty{
+.empty {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -206,21 +215,23 @@ button.valid{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
 
 /* ------------------------------- */
-.divAllKeyWords{
+
+.part-2-2>div {
     display: none;
+
 }
 
-.divAllKeyWords ul{
+.part-2-2>div>ul {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-.divAllKeyWords ul li{
+.part-2-2>div>ul>li {
     padding: 2rem;
     border-radius: 1rem;
     font-size: 1.8rem;
@@ -230,13 +241,13 @@ button.valid{
     cursor: pointer;
 }
 
-.divAllKeyWords ul li .select{
+.part-2-2>div>ul>li .select {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-.divAllKeyWords ul li .select span{
+.part-2-2>div>ul>li .select span {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -246,7 +257,7 @@ button.valid{
     font-size: 1.8rem;
 }
 
-.divAllKeyWords ul .details{
+.part-2-2>div .details {
     margin-top: 1rem;
     font-size: 1rem;
     display: flex;
@@ -254,29 +265,226 @@ button.valid{
     align-items: center;
 }
 
-.divAllKeyWords ul li.active{
+.part-2-2>div>ul>li.active {
     border: 1px solid var(--color-main);
     background-color: var(--color-main-2);
     color: var(--color-main);
 }
 
-.divAllKeyWords ul li.active span{
-    border: none;
-    background-color: var(--color-main);
-    color: var(--color-white-1);
-}
-
-.divAllKeyWords ul li .edit{
-    display: none;
-}
-
-.divAllKeyWords ul li.active .edit{
+.part-2-2>div>ul li .select div {
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 1px solid var(--color-white-3);
+
+}
+
+.part-2-2>div>ul li .select div ion-icon {
+    font-size: 1rem;
+}
+
+.part-2-2>div>ul li.active .select div {
+    border: 1px solid var(--color-main);
+}
+
+.divAllKeyWords ul li.active span {
+    background-color: var(--color-main);
+    color: var(--color-white-1);
+    border: none !important;
+}
+
+.AllOutline>ul li .select {
+    align-items: flex-start !important;
+}
+
+.AllOutline>ul li .select ul {
+    margin-left: 2.5rem;
+}
+
+.AllOutline>ul li .select ul li {
+    list-style-type: decimal;
+    margin-bottom: 0.5rem;
+}
+
+/* --------------------- */
+.complete-the-fields.step {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.complete-the-fields.step .p1 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.complete-the-fields.step .p1>div:not(:first-of-type) {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.complete-the-fields.step .p1 input {
+    width: 100%;
+}
+
+.complete-the-fields.step>div:last-of-type {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     gap: 1rem;
 }
 
-.divAllKeyWords ul li .edit img{
-    width: 1.5rem;
+.complete-the-fields.step>div:last-of-type>div {
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--color-main);
+    color: var(--color-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 2.5rem;
     cursor: pointer;
 }
+
+.complete-the-fields.step>div:last-of-type input {
+    width: 8rem;
+}
+
+.complete-the-fields.step>div:last-of-type button {
+    background-color: var(--color-main);
+    color: var(--color-dark);
+    font-weight: 600;
+    width: 50%;
+}
+
+/* ---------------------------- */
+.toggle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1rem 0 2rem;
+    color: var(--color-white-3);
+    font-size:1.8rem;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 5rem;
+    height: 3rem;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-white-3);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 2rem;
+    width: 2rem;
+    left: 0.5rem;
+    bottom: 0.5rem;
+    background-color:var(--color-white-1-2);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color:#ec6f4dc4;
+}
+
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(2rem);
+    -ms-transform: translateX(2rem);
+    transform: translateX(2rem);
+}
+
+.slider.round {
+    border-radius: 3rem;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+/*----------------------------------*/
+
+.complete-the-fields.four .Article-Outline >span{
+    font-size: 1rem;
+    font-weight: 200;
+    margin-bottom: 1rem;
+}
+
+.Article-Outline .up{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.Article-Outline .up .oneArt,.Article-Outline .up input{
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.3rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: var(--color-dark-4);
+}
+
+
+
+.Article-Outline .up .oneArt >img{
+    width: 0.8rem;
+}
+
+.Article-Outline .up .oneArt:nth-of-type(1){
+    border: 1px solid var(--color-main);
+}
+
+.Article-Outline .up .oneArt:nth-of-type(1) .img{
+    background-color: var(--color-main);
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    border-radius: 0.5rem;
+}
+.Article-Outline .up .oneArt:not(:first-of-type),.Article-Outline .up input{
+    width: 90% !important;
+    align-self: flex-end;
+}
+
+.Article-Outline .up input{
+    margin-bottom: 1rem;
+}
+
+.complete-the-fields.four .btnNext{
+    background-color: var(--color-dark-4) !important;
+}
+
+/* ----------------------- */
