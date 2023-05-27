@@ -25,20 +25,63 @@
             <section class="sec-home" id="main-page">
                 <div class="main-page">
                     <div class="part-1">
-                        <div class="icon">
+                        <div>
                             <img
                                 src="../../images/aiArticle.svg"
                                 alt="email icon"
                             />
+                            <p>ai article writer</p>
                         </div>
-                        <p>ai article writer</p>
                         <div>
-                            <a href="">
+                            <a href="#">
                                 <img
                                     src="../../images/Icon  video.svg"
                                     alt="icon video"
                                 />
                             </a>
+                            <img
+                                src="../../images/Icon out.svg"
+                                alt=""
+                                class="iconExport"
+                            />
+                        </div>
+                        <div class="optionExport">
+                            <p>Shared this article</p>
+                            <p>Link Sharing</p>
+                            <div class="toggle">
+                                <p>Public link</p>
+                                <label class="switch">
+                                    <input type="checkbox" checked />
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+
+                            <div>
+                                <p>Download</p>
+                                <ul>
+                                    <li>
+                                        <img
+                                            src="../../images/icon pdf.svg"
+                                            alt=""
+                                        />
+                                        <p>pdf</p>
+                                    </li>
+                                    <li>
+                                        <img
+                                            src="../../images/icon word.svg"
+                                            alt=""
+                                        />
+                                        <p>word</p>
+                                    </li>
+                                    <li>
+                                        <img
+                                            src="../../images/icon html.svg"
+                                            alt=""
+                                        />
+                                        <p>html</p>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
 
@@ -55,22 +98,38 @@
                                 <div class="step-by-step">
                                     <div class="one active">
                                         <p class="stepNum">1</p>
-                                        <p>KEYWORDS</p>
+                                        <img
+                                            src="../../images/step-1.svg"
+                                            alt=""
+                                        />
+                                        <p class="stepText">KEYWORDS</p>
                                     </div>
                                     <span></span>
                                     <div class="two">
                                         <p class="stepNum">2</p>
-                                        <p>IDEAS</p>
+                                        <img
+                                            src="../../images/step-2.svg"
+                                            alt=""
+                                        />
+                                        <p class="stepText">IDEAS</p>
                                     </div>
                                     <span></span>
                                     <div class="three">
                                         <p class="stepNum">3</p>
-                                        <p>OUTLINE</p>
+                                        <img
+                                            src="../../images/step-3.svg"
+                                            alt=""
+                                        />
+                                        <p class="stepText">OUTLINE</p>
                                     </div>
                                     <span></span>
                                     <div class="four">
+                                        <img
+                                            src="../../images/step-4.svg"
+                                            alt=""
+                                        />
                                         <p class="stepNum">4</p>
-                                        <p>ARTICLE</p>
+                                        <p class="stepText">ARTICLE</p>
                                     </div>
                                 </div>
                             </div>
@@ -181,26 +240,42 @@
                                         </div>
                                     </div>
                                     <div>
-                                        <label for="inputTone">
+                                        <label>
                                             <p>tone of voice</p>
                                         </label>
-                                        <input
-                                            type="text"
-                                            placeholder="pro"
-                                            class="inputTone"
-                                            id="inputTone"
-                                        />
+                                        <div class="divSelect tone">
+                                            <p class="valueSelect">
+                                                Professional
+                                            </p>
+                                            <ion-icon
+                                                name="caret-down-outline"
+                                            ></ion-icon>
+                                        </div>
+                                    </div>
+                                    <div class="ulSelect tone">
+                                        <ul>
+                                            <li>Professional</li>
+                                            <li>excited</li>
+                                            <li>encouraging</li>
+                                        </ul>
                                     </div>
                                     <div>
-                                        <label for="inputLanguage">
+                                        <label>
                                             <p>language</p>
                                         </label>
-                                        <input
-                                            type="text"
-                                            placeholder="en"
-                                            class="inputLanguage"
-                                            id="inputLanguage"
-                                        />
+                                        <div class="divSelect language">
+                                            <p class="valueSelect">English</p>
+                                            <ion-icon
+                                                name="caret-down-outline"
+                                            ></ion-icon>
+                                        </div>
+                                    </div>
+                                    <div class="ulSelect language">
+                                        <ul>
+                                            <li>English</li>
+                                            <li>arabic</li>
+                                            <li>German</li>
+                                        </ul>
                                     </div>
                                 </div>
 
@@ -271,26 +346,23 @@
                                         </div>
                                     </div>
                                     <div>
-                                        <label for="inputTone">
+                                        <label>
                                             <p>tone of voice</p>
                                         </label>
-                                        <input
-                                            type="text"
-                                            placeholder="pro"
-                                            class="inputTone"
-                                            id="inputTone"
-                                        />
+                                        <div class="divSelect tone">
+                                            <p class="valueSelect">
+                                                Professional
+                                            </p>
+                                        </div>
                                     </div>
+
                                     <div>
-                                        <label for="inputLanguage">
+                                        <label>
                                             <p>language</p>
                                         </label>
-                                        <input
-                                            type="text"
-                                            placeholder="en"
-                                            class="inputLanguage"
-                                            id="inputLanguage"
-                                        />
+                                        <div class="divSelect language">
+                                            <p class="valueSelect">English</p>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -354,23 +426,67 @@
                                                     src="../../images/enable to darg and drop.svg"
                                                     alt=""
                                                 />
-                                                <p>Introduction1</p>
+                                                <div class="img">
+                                                    <ion-icon
+                                                        name="checkmark-outline"
+                                                    ></ion-icon>
+                                                </div>
+                                                <span>
+                                                    <p>Introduction</p>
+                                                    <ion-icon
+                                                        name="remove-outline"
+                                                        class="icon-remove"
+                                                    ></ion-icon>
+                                                </span>
                                             </div>
                                             <div class="oneArt">
                                                 <img
                                                     src="../../images/enable to darg and drop.svg"
                                                     alt=""
                                                 />
-                                                <p>Introduction5</p>
+                                                <div class="img">
+                                                    <ion-icon
+                                                        name="checkmark-outline"
+                                                    ></ion-icon>
+                                                </div>
+                                                <span>
+                                                    <p>
+                                                        Definition of UI/UX
+                                                        design
+                                                    </p>
+                                                    <ion-icon
+                                                        name="remove-outline"
+                                                        class="icon-remove"
+                                                    ></ion-icon>
+                                                </span>
                                             </div>
                                             <div class="oneArt">
                                                 <img
                                                     src="../../images/enable to darg and drop.svg"
                                                     alt=""
                                                 />
-                                                <p>Introductio</p>
+                                                <div class="img">
+                                                    <ion-icon
+                                                        name="checkmark-outline"
+                                                    ></ion-icon>
+                                                </div>
+                                                <span>
+                                                    <p>
+                                                        Importance of UI/UX
+                                                        design in product
+                                                        development
+                                                    </p>
+                                                    <ion-icon
+                                                        name="remove-outline"
+                                                        class="icon-remove"
+                                                    ></ion-icon>
+                                                </span>
                                             </div>
-                                            <input type="text" placeholder="Add Talking Point" class="addTalkingPoint">
+                                            <input
+                                                type="text"
+                                                placeholder="Add Talking Point"
+                                                class="addTalkingPoint"
+                                            />
                                         </div>
                                         <div class="up">
                                             <div class="oneArt">
@@ -378,23 +494,67 @@
                                                     src="../../images/enable to darg and drop.svg"
                                                     alt=""
                                                 />
-                                                <p>Introduction</p>
+                                                <div class="img">
+                                                    <ion-icon
+                                                        name="checkmark-outline"
+                                                    ></ion-icon>
+                                                </div>
+                                                <span>
+                                                    <p>
+                                                        User Experience (UX)
+                                                        Design 1
+                                                    </p>
+                                                    <ion-icon
+                                                        name="remove-outline"
+                                                        class="icon-remove"
+                                                    ></ion-icon>
+                                                </span>
                                             </div>
                                             <div class="oneArt">
                                                 <img
                                                     src="../../images/enable to darg and drop.svg"
                                                     alt=""
                                                 />
-                                                <p>Introduction</p>
+                                                <div class="img">
+                                                    <ion-icon
+                                                        name="checkmark-outline"
+                                                    ></ion-icon>
+                                                </div>
+                                                <span>
+                                                    <p>
+                                                        User Experience (UX)
+                                                        Design
+                                                    </p>
+                                                    <ion-icon
+                                                        name="remove-outline"
+                                                        class="icon-remove"
+                                                    ></ion-icon>
+                                                </span>
                                             </div>
                                             <div class="oneArt">
                                                 <img
                                                     src="../../images/enable to darg and drop.svg"
                                                     alt=""
                                                 />
-                                                <p>Introduction</p>
+                                                <div class="img">
+                                                    <ion-icon
+                                                        name="checkmark-outline"
+                                                    ></ion-icon>
+                                                </div>
+                                                <span>
+                                                    <p>Elements of UX design</p>
+
+                                                    <ion-icon
+                                                        name="remove-outline"
+                                                        class="icon-remove"
+                                                    ></ion-icon>
+                                                </span>
                                             </div>
-                                            <input type="text" placeholder="Add Talking Point" class="addTalkingPoint">
+                                            <input
+                                                type="text"
+                                                placeholder="Add Talking Point"
+                                                class="addTalkingPoint"
+                                            />
                                         </div>
                                     </div>
                                     <div>
@@ -422,26 +582,23 @@
                                         </div>
                                     </div>
                                     <div>
-                                        <label for="inputTone">
+                                        <label>
                                             <p>tone of voice</p>
                                         </label>
-                                        <input
-                                            type="text"
-                                            placeholder="pro"
-                                            class="inputTone"
-                                            id="inputTone"
-                                        />
+                                        <div class="divSelect tone">
+                                            <p class="valueSelect">
+                                                Professional
+                                            </p>
+                                        </div>
                                     </div>
+
                                     <div>
-                                        <label for="inputLanguage">
+                                        <label>
                                             <p>language</p>
                                         </label>
-                                        <input
-                                            type="text"
-                                            placeholder="en"
-                                            class="inputLanguage"
-                                            id="inputLanguage"
-                                        />
+                                        <div class="divSelect language">
+                                            <p class="valueSelect">English</p>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -628,11 +785,45 @@
                             <!-- --------------------- -->
                             <div class="endArt">
                                 <div class="img">
-                                    <img src="../../images/image 32.svg" alt="">
+                                    <img
+                                        src="../../images/image 32.svg"
+                                        alt=""
+                                    />
                                 </div>
-                                <h1>Introduction</h1>
-                                <h2>Definition of UI/UX design </h2>
-                                <p>UI/UX design is a critical aspect of product development in today's digital age. UI/UX design refers to the visual and interactive elements that shape how users engage with a product. It encompasses everything from the layout and design of a website to the functionality of an app.</p>
+                                <div class="text">
+                                    <p class="head-1">Introduction</p>
+                                    <p class="head-2">
+                                        Definition of UI/UX design
+                                    </p>
+                                    <p>
+                                        uI/UX design is a critical aspect of
+                                        product development in today's digital
+                                        age. UI/UX design refers to the visual
+                                        and interactive elements that shape how
+                                        users engage with a product. It
+                                        encompasses everything from the layout
+                                        and design of a website to the
+                                        functionality of an app.
+                                    </p>
+                                    <p class="head-2">
+                                        Importance of UI/UX design in product
+                                        development
+                                    </p>
+                                    <p>
+                                        The importance of UI/UX design in
+                                        product development cannot be
+                                        overstated. It is responsible for
+                                        creating a user-centric product that
+                                        meets the needs of the end-user. A
+                                        product that is easy to use,
+                                        aesthetically pleasing, and enjoyable to
+                                        engage with is more likely to succeed in
+                                        the market. UI/UX design also helps
+                                        businesses to differentiate themselves
+                                        from their competitors and build a loyal
+                                        customer base.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>

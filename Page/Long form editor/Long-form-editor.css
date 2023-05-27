@@ -22,6 +22,13 @@
     color: var(--color-dark-2);
     padding: 1rem;
     border-radius: 1rem;
+    cursor: pointer;
+}
+
+.main-page .part-1 > div:nth-of-type(2) a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .main-page .part-1 > div:nth-of-type(2) img {
@@ -32,10 +39,6 @@
 
 .part-2 li {
     margin-left: 16px;
-}
-
-a {
-    cursor: pointer;
 }
 
 .part-2 {
