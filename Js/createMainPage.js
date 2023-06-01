@@ -207,6 +207,8 @@ const profileInfo = document.getElementById("profile-info");
 const btnProfileInfo = document.getElementById("btnProfileInfo");
 const asideNav = document.getElementById("aside-nav");
 const btnToggleAsideActive = document.getElementById("btnToggleAside");
+const iconToggleAsideActive= document.querySelector("#btnToggleAside div");
+
 
 btnProfileInfo.addEventListener("click", () => {
     profileInfo.classList.toggle("active");
@@ -214,6 +216,7 @@ btnProfileInfo.addEventListener("click", () => {
 
 btnToggleAsideActive.addEventListener("click", () => {
     asideNav.classList.toggle("active");
+    iconToggleAsideActive.classList.toggle("active");
 });
 
 window.addEventListener("click", function (event) {

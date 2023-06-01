@@ -116,6 +116,10 @@ aside ul li#btnToggleAside div ion-icon {
     color: var(--color-dark);
 }
 
+aside ul li#btnToggleAside div.active ion-icon{
+    transform: rotate(180deg);
+}
+
 aside ul li p#textAccount {
     color: var(--color-white-3);
     text-transform: uppercase;
