@@ -294,6 +294,14 @@
     cursor:grab;
 }
 
+.newBlock img{
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.newBlock:hover img{
+    opacity: 1;
+}
 .newBlock ion-icon{
     display: none;
     font-size: 1.4rem;
