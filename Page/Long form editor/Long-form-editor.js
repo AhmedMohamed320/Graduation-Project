@@ -45,12 +45,12 @@ function fileHandle(value) {
 }
 
 // -------------------------------------
-const divAskFeather=document.querySelector(".askFeather");
-const InputPressSpace=document.querySelector("#pressSpace");
+const divAskFeather = document.querySelector(".askFeather");
+const InputPressSpace = document.querySelector("#pressSpace");
 const inputDraftWithAi = document.getElementById("inputDraftWithAi");
 const selectOptions = document.querySelectorAll(".select .option");
-const divStepOne=document.querySelector(".step1");
-const divStepTwo=document.querySelector(".step2");
+const divStepOne = document.querySelector(".step1");
+const divStepTwo = document.querySelector(".step2");
 const optionReload = document.querySelector(".reload");
 const optionClose = document.querySelector(".close");
 
@@ -67,25 +67,27 @@ inputDraftWithAi.addEventListener("keydown", function (event) {
         content.innerText = "";
         headP.textContent = inputDraftWithAi.value;
         inputDraftWithAi.value = "Tell Al what to do next...";
-        divStepOne.style.display="none";
-        divStepTwo.style.display="flex";
-        InputPressSpace.style.display="none";
+        divStepOne.style.display = "none";
+        divStepTwo.style.display = "flex";
+        InputPressSpace.style.display = "none";
     }
 });
 
-optionReload.addEventListener("click", ()=>{
+optionReload.addEventListener("click", () => {
     location.reload();
-})
+});
 
-optionClose.addEventListener("click", ()=>{
-    divAskFeather.style.display="none";
-})
+optionClose.addEventListener("click", () => {
+    divAskFeather.style.display = "none";
+});
 
 InputPressSpace.addEventListener("keydown", function (event) {
     if (event.code !== "Space") {
         event.preventDefault();
-    }
-    else{
+    } else {
         divAskFeather.style.display = "flex";
+    }
+    if (event.keyCode === 27) {
+        divAskFeather.style.display = "none";
     }
 });
