@@ -111,6 +111,7 @@ recognition.continuous = true;
 
 recordButton.addEventListener("click", () => {
     recognition.start();
+    recordButton.src="../../images/Icon  mic.svg";
 });
 
 recognition.addEventListener("result", (event) => {
@@ -119,8 +120,10 @@ recognition.addEventListener("result", (event) => {
             inputChat.value += event.results[i][0].transcript;
         }
     }
+    
 });
 
 recognition.addEventListener("end", () => {
     recognition.stop();
+    recordButton.src="../../images/Icon  mic-2.svg";
 });

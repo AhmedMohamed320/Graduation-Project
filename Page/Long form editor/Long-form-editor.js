@@ -36,7 +36,7 @@ const selectOptions = document.querySelectorAll(".select .option");
 const divStepOne = document.querySelector(".step1");
 const divStepTwo = document.querySelector(".step2");
 const optionReload = document.querySelector(".reload");
-const optionClose = document.querySelector(".close");
+const optionClose = document.querySelectorAll(".option.close");
 
 const headP = document.querySelector(".heading");
 selectOptions.forEach((option) => {
@@ -60,12 +60,24 @@ inputDraftWithAi.addEventListener("keydown", function (event) {
 //     location.reload();
 // });
 
-optionClose.addEventListener("click", () => {
+optionClose.forEach((option) => {
+    option.addEventListener("click", () => {
+        resetAskAiDiv();
+    });
+});
+
+function resetAskAiDiv() {
     divAskFeather.style.display = "none";
     inputDraftWithAi.placeholder = "Ask Feather.Al to write anything...";
     divStepTwo.style.display = "none";
     divStepOne.style.display = "flex";
     inputDraftWithAi.value = "";
+}
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+        resetAskAiDiv();
+    }
 });
 
 // --------------------------------
@@ -229,7 +241,3 @@ function dragAndDrop() {
         });
     });
 }
-
-// if (event.keyCode === 27) {
-//     divAskFeather.style.display = "none";
-// }
