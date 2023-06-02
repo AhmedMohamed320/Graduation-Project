@@ -5,6 +5,8 @@ const divChatWithAi = document.querySelector(".chat-with-ai");
 const sentMessage = document.querySelector(".sent");
 const inputChat = document.getElementById("inputChat");
 
+InputChat.focus();
+
 InputChat.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
         createChatAi();
@@ -84,8 +86,17 @@ function scrollBottom() {
     divChatWithAi.scrollTo(0, divChatWithAi.scrollHeight);
 }
 
-document.addEventListener("keydown", function (event) {
-    if (event.code === "Space") {
-        InputChat.focus();
-    }
-});
+// document.addEventListener("keydown", function (event) {
+//     if (event.code === "Space") {
+//         InputChat.focus();
+//     }
+// });
+// ---------------
+const paragraphFeatures =document.querySelectorAll(".some-features .feature > div:nth-of-type(2)");
+
+paragraphFeatures.forEach(div=>{
+    div.addEventListener("click", ()=>{
+        const text=div.querySelector("p").innerText;
+        inputChat.value=text;
+    })
+})
