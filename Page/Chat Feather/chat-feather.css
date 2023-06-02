@@ -248,6 +248,7 @@
 
 .input-chat #mic {
     width: 2.8rem;
+    cursor: pointer;
 }
 
 .input-chat input {

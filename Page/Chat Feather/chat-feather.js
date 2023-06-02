@@ -100,3 +100,22 @@ paragraphFeatures.forEach(div=>{
         inputChat.value=text;
     })
 })
+// ---------------
+
+const recordButton = document.getElementById("mic");
+const recognition = new window.webkitSpeechRecognition();
+
+recognition.continuous = true;
+
+recordButton.addEventListener("click", () => {
+  recognition.start();
+});
+
+recognition.addEventListener("result", event => {
+  const text = event.results[0][0].transcript;
+  inputChat.value += text;
+});
+
+recognition.addEventListener("end", () => {
+  recognition.stop();
+});
