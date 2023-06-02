@@ -92,14 +92,16 @@ function scrollBottom() {
 //     }
 // });
 // ---------------
-const paragraphFeatures =document.querySelectorAll(".some-features .feature > div:nth-of-type(2)");
+const paragraphFeatures = document.querySelectorAll(
+    ".some-features .feature > div:nth-of-type(2)"
+);
 
-paragraphFeatures.forEach(div=>{
-    div.addEventListener("click", ()=>{
-        const text=div.querySelector("p").innerText;
-        inputChat.value=text;
-    })
-})
+paragraphFeatures.forEach((div) => {
+    div.addEventListener("click", () => {
+        const text = div.querySelector("p").innerText;
+        inputChat.value = text;
+    });
+});
 // ---------------
 
 const recordButton = document.getElementById("mic");
@@ -108,14 +110,17 @@ const recognition = new window.webkitSpeechRecognition();
 recognition.continuous = true;
 
 recordButton.addEventListener("click", () => {
-  recognition.start();
+    recognition.start();
 });
 
-recognition.addEventListener("result", event => {
-  const text = event.results[0][0].transcript;
-  inputChat.value += text;
+recognition.addEventListener("result", (event) => {
+    for (let i = event.resultIndex; i < event.results.length; i++) {
+        if (event.results[i].isFinal) {
+            inputChat.value += event.results[i][0].transcript;
+        }
+    }
 });
 
 recognition.addEventListener("end", () => {
-  recognition.stop();
+    recognition.stop();
 });
