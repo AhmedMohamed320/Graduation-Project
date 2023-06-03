@@ -141,12 +141,12 @@
     color: var(--color-white-2);
 }
 
-.heading {
+#headTitle{
     text-transform: capitalize;
-    font-size: 2.8rem;
+    font-size: 4rem;
+    font-weight: 600;
     color: var(--color-white-1);
     padding-bottom: 1rem;
-    font-weight: 600;
 }
 
 .mainContent .askFeather {

@@ -106,12 +106,19 @@ paragraphFeatures.forEach((div) => {
 
 const recordButton = document.getElementById("mic");
 const recognition = new window.webkitSpeechRecognition();
+let isRecording = false;
 
 recognition.continuous = true;
 
 recordButton.addEventListener("click", () => {
-    recognition.start();
-    recordButton.src="../../images/Icon  mic.svg";
+    if (!isRecording) {
+        recognition.start();
+        recordButton.src="../../images/Icon  mic.svg";
+    } else {
+        recognition.stop();
+        recordButton.src="../../images/Icon  mic-2.svg";
+    }
+    isRecording = !isRecording;
 });
 
 recognition.addEventListener("result", (event) => {
@@ -120,10 +127,11 @@ recognition.addEventListener("result", (event) => {
             inputChat.value += event.results[i][0].transcript;
         }
     }
-    
 });
 
 recognition.addEventListener("end", () => {
-    recognition.stop();
-    recordButton.src="../../images/Icon  mic-2.svg";
-});
+    if (isRecording) {
+        recognition.start();
+    }
+});;
+

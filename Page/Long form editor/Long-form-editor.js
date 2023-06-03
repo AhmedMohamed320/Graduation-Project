@@ -29,6 +29,32 @@ content.addEventListener("mouseenter", function () {
 });
 
 // -------------------------------------
+const inputField = document.getElementById("headTitle");
+let originalValue = inputField.value;
+let isEditing = false;
+
+inputField.addEventListener("click", () => {
+    if (!isEditing) {
+        inputField.removeAttribute("readonly");
+        originalValue = inputField.value;
+        isEditing = true;
+    }
+});
+
+inputField.addEventListener("keydown", (event) => {
+    if (isEditing && event.key === "Enter") {
+        inputField.setAttribute("readonly", true);
+        isEditing = false;
+    }
+});
+
+inputField.addEventListener("blur", () => {
+    if (isEditing) {
+        inputField.setAttribute("readonly", true);
+        isEditing = false;
+    }
+});
+// -------------------------------------
 const divAskFeather = document.querySelector(".askFeather");
 const mainInput = document.querySelector("#mainInput");
 const inputDraftWithAi = document.getElementById("inputDraftWithAi");
@@ -117,17 +143,17 @@ mainInput.addEventListener("keydown", function (event) {
             hideDivCommandsOption();
             divAskFeather.style.display = "block";
         });
-    } else if (event.key === "Enter") {
+    } else if (
+        event.key === "Enter" &&
+        divCommandsOption.style.display === "none"
+    ) {
         createBlock(mainInput.value, blockClassType);
         blockClassType = "paragraphStyle";
         mainInput.setAttribute("class", `${blockClassType}`);
         mainInput.value = "";
-    } else {
+    } else if (event.key != "ArrowUp" && event.key != "ArrowDown") {
         divCommandsOption.style.display = "none";
     }
-    // else if (event.key != "ArrowUp" && event.key != "ArrowDown") {
-    //     divCommandsOption.style.display = "none";
-    // }
 });
 
 function hideDivCommandsOption() {
@@ -136,11 +162,11 @@ function hideDivCommandsOption() {
     mainInput.setAttribute("class", `${blockClassType}`);
 }
 
-// function deleteSlash() {
-//     const inputValue = mainInput.value;
-//     const modifiedValue = inputValue.slice(0, -1);
-//     mainInput.value = modifiedValue;
-// }
+function deleteSlash() {
+    const inputValue = mainInput.value;
+    const modifiedValue = inputValue.slice(0, -1);
+    mainInput.value = modifiedValue;
+}
 
 function createBlock(value, classType) {
     const block = document.createElement("div");
@@ -157,43 +183,49 @@ function createBlock(value, classType) {
 
 // ---------------
 
-// const myList = document.querySelector(".commandsOption ul");
-// const listItems = myList.querySelectorAll("li");
-// let focusedIndex = -1;
+const myList = document.querySelector(".commandsOption ul");
+const listItems = myList.querySelectorAll("li");
+let focusedIndex = -1;
 
-// document.addEventListener("keydown", function (event) {
-//     if (event.key === "ArrowUp") {
-//         focusedIndex = Math.max(focusedIndex - 1, 0);
-//         updateFocus();
-//         event.preventDefault();
-//     } else if (event.key === "ArrowDown") {
-//         focusedIndex = Math.min(focusedIndex + 1, listItems.length - 1);
-//         updateFocus();
-//         event.preventDefault();
-//     // }else if (event.key === 'Enter' && focusedIndex !== -1) {
+mainInput.addEventListener("keydown", function (event) {
+    if (divCommandsOption.style.display === "block") {
+        if (event.key === "ArrowUp") {
+            focusedIndex = Math.max(focusedIndex - 1, 0);
+            updateFocus();
+            event.preventDefault();
+        } else if (event.key === "ArrowDown") {
+            focusedIndex = Math.min(focusedIndex + 1, listItems.length - 1);
+            updateFocus();
+            event.preventDefault();
+        } else if (event.key === "Enter" && focusedIndex !== -1) {
+            listItems.forEach((option, index) => {
+                if (index === focusedIndex) {
+                    option.click();
+                }
+            });
+        }
+    }
+});
 
-//     //   }
-// });
+function updateFocus() {
+    listItems.forEach((item, index) => {
+        if (index === focusedIndex) {
+            item.classList.add("focused");
+        } else {
+            item.classList.remove("focused");
+        }
+    });
+}
 
-// function updateFocus() {
-//     listItems.forEach((item, index) => {
-//         if (index === focusedIndex) {
-//             item.classList.add("focused");
-//         } else {
-//             item.classList.remove("focused");
-//         }
-//     });
-// }
+myList.addEventListener("mouseover", function (event) {
+    const target = event.target;
+    if (target.tagName === "LI") {
+        focusedIndex = Array.from(listItems).indexOf(target);
+        updateFocus();
+    }
+});
 
-// myList.addEventListener("mouseover", function (event) {
-//     const target = event.target;
-//     if (target.tagName === "LI") {
-//         focusedIndex = Array.from(listItems).indexOf(target);
-//         updateFocus();
-//     }
-// });
-
-// updateFocus();
+updateFocus();
 
 // -----------------------
 function dragAndDrop() {
