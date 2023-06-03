@@ -150,7 +150,8 @@ mainInput.addEventListener("keydown", function (event) {
         });
     } else if (
         event.key === "Enter" &&
-        divCommandsOption.style.display === "none"
+        divCommandsOption.style.display === "none" && 
+        mainInput.value !=""
     ) {
         createBlock(mainInput.value, blockClassType);
         blockClassType = "paragraphStyle";
