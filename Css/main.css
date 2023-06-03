@@ -42,12 +42,6 @@ body {
     }
 }
 
-@media (max-width: 80rem) {
-    html {
-        font-size: 45.3125%;
-    }
-}
-
 button {
     cursor: pointer;
 }
