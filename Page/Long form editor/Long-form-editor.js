@@ -64,7 +64,6 @@ const divStepTwo = document.querySelector(".step2");
 const optionReload = document.querySelector(".reload");
 const optionClose = document.querySelectorAll(".option.close");
 
-const headP = document.querySelector(".heading");
 selectOptions.forEach((option) => {
     option.addEventListener("click", () => {
         const optionValue = option.querySelector("p").textContent.trim();
@@ -114,6 +113,12 @@ const optionParagraph = document.querySelector(".commandsOption .paragraph");
 const optionBullet = document.querySelector(".commandsOption .bullet-list");
 const optionAskAi = document.querySelector(".commandsOption .askAi");
 const divCommandsOption = document.querySelector(".commandsOption");
+
+mainInput.addEventListener("input", function (event) {
+    const inputValue = event.target.value;
+    const modifiedValue = inputValue.replace(/\//g, "");
+    event.target.value = modifiedValue;
+});
 
 mainInput.addEventListener("keydown", function (event) {
     divAskFeather.style.display = "none";
