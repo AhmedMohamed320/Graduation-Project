@@ -188,7 +188,7 @@ const listItems = myList.querySelectorAll("li");
 let focusedIndex = -1;
 
 mainInput.addEventListener("keydown", function (event) {
-    if (divCommandsOption.style.display === "block") {
+    
         if (event.key === "ArrowUp") {
             focusedIndex = Math.max(focusedIndex - 1, 0);
             updateFocus();
@@ -204,7 +204,7 @@ mainInput.addEventListener("keydown", function (event) {
                 }
             });
         }
-    }
+    
 });
 
 function updateFocus() {
