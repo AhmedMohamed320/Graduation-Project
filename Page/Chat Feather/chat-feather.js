@@ -20,18 +20,14 @@ sentMessage.addEventListener("click", function () {
 });
 
 function createChatAi() {
-    const valueInputChat = inputChat.value;
-    if (isValid(valueInputChat)) {
+    if (inputChat.value.trim() !=="") {
+        console.log("yyyy");
         divWelcome.style.display = "none";
         divSomePrompts.style.display = "none";
         divChatWithAi.style.display = "flex";
         writeMessage();
         setTimeout(autoReply, 1000);
     }
-}
-
-function isValid(value) {
-    return value.length > 0;
 }
 
 function writeMessage() {
@@ -143,12 +139,11 @@ recognition.addEventListener("end", () => {
 // ------------------
 inputChat.addEventListener("input", () => {
     const numberOfLines = inputChat.value.split("\n").length;
-    if (numberOfLines > 5) {
-        inputChat.style.height = "10rem";
+    if (numberOfLines > 1) {
+        inputChat.style.height = "auto";
+        inputChat.style.height = inputChat.scrollHeight + "px";
         divSomePrompts.style.display = "none";
     } else {
         inputChat.style.height = "2rem";
     }
 });
-
-inputChat.addEventListener("keydown", (event) => {});
