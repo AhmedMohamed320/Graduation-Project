@@ -7,7 +7,10 @@ const sentMessage = document.querySelector(".sent");
 inputChat.focus();
 
 inputChat.addEventListener("keydown", function (event) {
-    if (event.key === "Enter") {
+    if (event.shiftKey && key === 13) {
+        inputChat.value += "\n";
+        event.preventDefault();
+    } else if (event.key === "Enter") {
         createChatAi();
     }
 });
@@ -42,9 +45,9 @@ function writeMessage() {
             <img src="" alt="">
         </div>
         <div class="text">
-            <p>
+            <code>
                 ${formattedCode}
-            </p>
+            </code>
         </div>
     </div>
 	`;
@@ -65,9 +68,9 @@ function autoReply() {
             />
         </div>
         <div class="text">
-            <p id="ai-text">
+            <code id="ai-text">
             Thank you for your awesome support!
-            </p>
+            </code>
             <div class="copy">
                 <ion-icon
                     name="copy-outline"
@@ -147,3 +150,5 @@ inputChat.addEventListener("input", () => {
         inputChat.style.height = "2rem";
     }
 });
+
+inputChat.addEventListener("keydown", (event) => {});
