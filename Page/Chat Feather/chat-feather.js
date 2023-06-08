@@ -1,13 +1,12 @@
 const divWelcome = document.querySelector(".welcome");
 const divSomePrompts = document.querySelector(".some-prompts");
-const InputChat = document.querySelector(".input-chat input");
+const inputChat = document.querySelector(".input-chat #inputChat");
 const divChatWithAi = document.querySelector(".chat-with-ai");
 const sentMessage = document.querySelector(".sent");
-const inputChat = document.getElementById("inputChat");
 
-InputChat.focus();
+inputChat.focus();
 
-InputChat.addEventListener("keydown", function (event) {
+inputChat.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
         createChatAi();
     }
@@ -33,6 +32,10 @@ function isValid(value) {
 }
 
 function writeMessage() {
+    const formattedCode = inputChat.value
+        .trim()
+        .replace(/\n/g, "<br>")
+        .replace(/\t/g, "&nbsp;&nbsp;&nbsp;&nbsp;");
     let message = `
     <div class="message me">
         <div class="img">
@@ -40,14 +43,15 @@ function writeMessage() {
         </div>
         <div class="text">
             <p>
-                ${inputChat.value}
+                ${formattedCode}
             </p>
         </div>
     </div>
 	`;
+
     divChatWithAi.insertAdjacentHTML("beforeend", message);
     inputChat.focus();
-    inputChat.value = "";
+    inputChat.value = " ";
     scrollBottom();
 }
 
@@ -74,11 +78,14 @@ function autoReply() {
 	`;
     divChatWithAi.insertAdjacentHTML("beforeend", message);
     scrollBottom();
-    const btnCopy = document.querySelector(".copy");
-    btnCopy.addEventListener("click", () => {
-        let text = document.querySelector("#ai-text").innerText;
-        navigator.clipboard.writeText(text);
-        alert("Text copied to clipboard!");
+    const btnCopy = document.querySelectorAll(".copy");
+    btnCopy.forEach((btn) => {
+        btn.addEventListener("click", (event) => {
+            const text = event.target.parentNode.parentNode
+                .querySelector("#ai-text")
+                .textContent.trim();
+            navigator.clipboard.writeText(text);
+        });
     });
 }
 
@@ -86,11 +93,6 @@ function scrollBottom() {
     divChatWithAi.scrollTo(0, divChatWithAi.scrollHeight);
 }
 
-// document.addEventListener("keydown", function (event) {
-//     if (event.code === "Space") {
-//         InputChat.focus();
-//     }
-// });
 // ---------------
 const paragraphFeatures = document.querySelectorAll(
     ".some-features .feature > div:nth-of-type(2)"
@@ -113,10 +115,10 @@ recognition.continuous = true;
 recordButton.addEventListener("click", () => {
     if (!isRecording) {
         recognition.start();
-        recordButton.src="../../images/Icon  mic.svg";
+        recordButton.src = "../../images/Icon  mic.svg";
     } else {
         recognition.stop();
-        recordButton.src="../../images/Icon  mic-2.svg";
+        recordButton.src = "../../images/Icon  mic-2.svg";
     }
     isRecording = !isRecording;
 });
@@ -133,5 +135,15 @@ recognition.addEventListener("end", () => {
     if (isRecording) {
         recognition.start();
     }
-});;
+});
 
+// ------------------
+inputChat.addEventListener("input", () => {
+    const numberOfLines = inputChat.value.split("\n").length;
+    if (numberOfLines > 5) {
+        inputChat.style.height = "10rem";
+        divSomePrompts.style.display = "none";
+    } else {
+        inputChat.style.height = "2rem";
+    }
+});

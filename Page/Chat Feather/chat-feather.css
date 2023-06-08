@@ -1,3 +1,7 @@
+*{
+    text-transform: none ;
+}
+
 .main-page .part-1 {
     display: flex;
     align-items: center;
@@ -136,7 +140,7 @@
 }
 
 .welcome {
-    height: 75%;
+    height: 72%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -241,10 +245,13 @@
     justify-content: flex-start;
     gap: 1rem;
     border: 1px solid var(--color-white-3);
-    border-radius: 1rem;
+    background-color: var(--color-dark-3);
+    border-radius: 20rem;
     padding: 1.5rem;
     position: sticky;
     bottom: 0;
+    z-index: 1;
+    box-shadow: -1.5rem -1rem 6rem 1rem var(--color-dark-3);
 }
 
 .input-chat #mic {
@@ -252,10 +259,11 @@
     cursor: pointer;
 }
 
-.input-chat input {
+.input-chat #inputChat {
     all: unset;
     width: 80%;
     font-size: 1.8rem;
+    height: 2rem;
 }
 
 .input-chat .sent {
@@ -282,6 +290,7 @@
     height:90%;
     overflow-y: auto;
     padding-right: 1rem;
+    padding-bottom: 2.5rem;
 }
 .chat-with-ai .message {
     display: flex;

@@ -139,6 +139,7 @@
     outline: none;
     border: none;
     color: var(--color-white-2);
+    width: 100%;
 }
 
 #headTitle{
