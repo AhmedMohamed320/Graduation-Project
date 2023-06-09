@@ -316,8 +316,17 @@ liSelectTone.forEach((li) => {
 });
 
 // -----------------------
-const iconExport=document.querySelector(".iconExport");
-const divOptionExport=document.querySelector(".optionExport");
-iconExport.addEventListener("click",()=>{
+const iconExport = document.querySelector(".iconExport");
+const divOptionExport = document.querySelector(".optionExport");
+iconExport.addEventListener("click", () => {
     divOptionExport.classList.toggle("active");
-})
+});
+// ---------------------
+const allStepDiv = document.querySelectorAll(".step-by-step>div");
+allStepDiv.forEach((div) => {
+    div.addEventListener("click", () => {
+        const numStepValue = div.querySelector(".stepNum").textContent;
+        numDiv=+numStepValue;
+        showDivStep();
+    });
+});
