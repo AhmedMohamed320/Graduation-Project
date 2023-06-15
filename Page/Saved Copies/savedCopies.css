@@ -144,6 +144,15 @@
     justify-content: space-between;
 }
 
+.footer .icon {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer .icon img{
+    width: 2rem;
+    cursor: pointer;
+}
 .footer .social {
     display: flex;
     align-items: center;

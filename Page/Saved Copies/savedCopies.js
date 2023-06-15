@@ -25,3 +25,12 @@ divDates.addEventListener("scroll", () => {
         btnScrollDivDatesLeft.classList.remove("disabled");
     }
 })
+
+// -----------------
+
+const deleteDivSave=document.querySelectorAll(".footer .icon");
+deleteDivSave.forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+        btn.parentElement.parentElement.remove();
+    })
+})
