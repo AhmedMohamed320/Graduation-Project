@@ -17,20 +17,22 @@ btnScrollDivDatesLeft.addEventListener("click", () => {
 });
 
 divDates.addEventListener("scroll", () => {
-    if(divDates.scrollLeft==0)
-    {
+    if (divDates.scrollLeft == 0) {
         btnScrollDivDatesLeft.classList.add("disabled");
-    }
-    else{
+    } else {
         btnScrollDivDatesLeft.classList.remove("disabled");
     }
-})
+});
 
 // -----------------
 
-const deleteDivSave=document.querySelectorAll(".footer .icon");
-deleteDivSave.forEach(btn=>{
-    btn.addEventListener("click", ()=>{
-        btn.parentElement.parentElement.remove();
-    })
-})
+const iconToShowPop = document.querySelectorAll(".showPop");
+iconToShowPop.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        btn.parentElement.classList.toggle("active");
+    });
+});
+
+
+
+// --------------------
